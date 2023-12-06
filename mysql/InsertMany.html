@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="ic.png" type="x-icon">
+    <link rel="stylesheet" href="pattern1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo_img">
+                <img src="logo.png" alt="">
+            </div>
+
+        </div>
+        
+    </header>
+    <div class="container">
+        <div class="heading">
+            <h3>Insert Many Rows</h3>
+        </div>
+        <div class="program">
+            <p>
+                import pymysql as mq <br>
+mysql=mq.connect(host="localhost",user="root",password="", <br> database="college") <br>
+cur = mysql.cursor() <br>
+ <br>
+try: <br> 
+&emsp;query="INSERT INTO student(stu_name,stu_class,stu_email) values(%s,%s,%s)" <br>
+&emsp;t=[("abhi","11th","abhi@gmail.com"),("Vicky","10th","vicky@gmail.com"),("amit","10th","amit@gmail.com")] <br>
+&emsp;cur.executemany(query,t) <br>
+&emsp;mysql.commit() <br>
+&emsp;print("Row inserted") <br>
+    <br>
+except: <br> 
+&emsp;print("Error in insertion")
+                <!-- &emsp; -->
+            </p>
+        </div>
+        
+    </div>
+    <footer>
+        <p>&copy; 2023 - Python Programming Tutorial | Designed by AsCodic</p>
+    </footer>
+    
+</body>
+</html>

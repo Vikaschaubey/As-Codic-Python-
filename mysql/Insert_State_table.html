@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" href="ic.png" type="x-icon">
+    <link rel="stylesheet" href="pattern1.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <div class="logo_img">
+                <img src="logo.png" alt="">
+            </div>
+
+        </div>
+        
+    </header>
+    <div class="container">
+        <div class="heading">
+            <h3>Insert in State Table</h3>
+        </div>
+        <div class="program">
+            <p>
+                import pymysql as mq <br>
+mysql=mq.connect(host="localhost",user="root",password="",<br> database="college") <br>
+cur = mysql.cursor() <br>
+ <br>
+try: <br>
+    &emsp;query="INSERT INTO state(state_id,state_name,country_id) values(%s,%s,%s)" <br>
+    &emsp;t=[(1,"Delhi",3),(2,"Goa",4),(3,"UP",1),(4,"Bihar",8),(5,"MP",7),(6,"Punjab",2)] <br>
+    &emsp;cur.executemany(query,t) <br>
+    &emsp;mysql.commit() <br>
+    &emsp;print("Row inserted") <br>
+except: <br>
+    &emsp;print("Error in insertion")
+                <!-- &emsp; -->
+            </p>
+        </div>
+        
+    </div>
+    <footer>
+        <p>&copy; 2023 - Python Programming Tutorial | Designed by AsCodic</p>
+    </footer>
+    
+</body>
+</html>
