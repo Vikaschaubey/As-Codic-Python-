@@ -221,7 +221,7 @@ footer{
     margin: 1rem;
     background-color: #2F2F2F;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
 }
@@ -229,7 +229,7 @@ footer{
     /* border: 1px solid white; */
     width: 50%;
     margin: 2rem;
-    margin-left: 0;
+    margin-left: 4rem;
     padding: 1rem 0;
     
    
@@ -282,7 +282,8 @@ footer{
 
 
 .foot2{
-    margin: 2rem 0;
+    margin: 2rem 8rem 2rem 5.5rem;
+    /* margin-right: 8rem; */
     color: white;
     display: flex;
     flex-direction: column;
